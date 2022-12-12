@@ -1,0 +1,6 @@
+name: MinecraftHistory
+version: '${project.version}'
+main: minecraft.history.minecrafthistory.MinecraftHistory
+api-version: 1.19
+authors: [ Awesome_Chicken ]
+description: a plugin to help you learn about history!
