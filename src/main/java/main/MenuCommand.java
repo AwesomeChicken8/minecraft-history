@@ -32,14 +32,25 @@ public class MenuCommand implements CommandExecutor {
             ));
             defofPrauge.setItemMeta(defofPraugemeta);
 
+            ItemStack moonLanding = new ItemStack(Material.FEATHER, 1);
+            ItemMeta moonLandingMeta = moonLanding.getItemMeta();
+            moonLandingMeta.setDisplayName(ChatColor.DARK_GRAY + "The Apollo 11 Moon Landing");
+            moonLandingMeta.setLore(Arrays.asList(
+                    "The Apollo 11 Moon Landing was the\n",
+                    "first time humans stepped on the Moon!\n",
+                    "Click to watch it!"
+            ));
+            moonLanding.setItemMeta(moonLandingMeta);
+
             inventory.setItem(10, defofPrauge);
+            inventory.setItem(11, moonLanding);
 
             ItemStack background = new ItemStack(Material.YELLOW_STAINED_GLASS_PANE, 1);
             ItemMeta backgroundMeta = background.getItemMeta();
-            backgroundMeta.setDisplayName("");
+            backgroundMeta.setDisplayName(" ");
             background.setItemMeta(backgroundMeta);
 
-            for(int i : new int[]{0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,41,42,43,44}){
+            for(int i : new int[]{0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,40,41,42,43,44}){
                 inventory.setItem(i, background);
             }
 

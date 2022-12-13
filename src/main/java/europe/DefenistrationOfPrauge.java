@@ -25,6 +25,9 @@ public class DefenistrationOfPrauge {
 
         ArrayList<Villager> crowd = new ArrayList<>();
 
+        Location defenestrate = new Location(player.getWorld(), 1924.5, 135, -2220.5);
+        player.teleport(defenestrate);
+
         Villager theCount = null;
         List<Entity> nearbyEntities = (List<Entity>) player.getWorld().getNearbyEntities(player.getLocation(), 15, 15, 15);
 
@@ -39,7 +42,6 @@ public class DefenistrationOfPrauge {
         }
 
         player.sendMessage(ChatColor.GREEN + "Hello you have run the test command!");
-        Location defenestrate = new Location(player.getWorld(), 1924.5, 135, -2220.5);
         Location count = new Location(player.getWorld(), 1924, 135, -2216);
         count.setYaw((float) -180);
         theCount.teleport(count);
